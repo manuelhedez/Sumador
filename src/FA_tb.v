@@ -20,5 +20,4 @@ CIN_tb     = 1;
 #100
 $stop;
 end
-
 endmodule

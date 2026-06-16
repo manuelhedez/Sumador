@@ -1,0 +1,38 @@
+module s4b(
+input A[3,0],
+input B[3,0],
+output SUMAf[4,0],
+);
+//elementos internos
+wire cable1, cable2,cable3,cable4;
+
+//3 cuerpo del modulo assign, bloques secuenciales y instancias 
+    //instancia 
+    FA 1(
+        .A(A),
+        .B(B),
+        .suma(c1),
+        .cout(0)
+		  );
+    FA 2(
+        .a(c1),
+        .b(Cin),
+        .suma(SUMA),
+        .cout(c3)
+        
+    );
+    FA 3(
+        .a(c1),
+        .b(Cin),
+        .suma(SUMA),
+        .cout(c3)
+        
+    );
+    FA 4(
+        .a(c1),
+        .b(Cin),
+        .suma(SUMA),
+        .cout(c3)
+        
+    )
+endmodule
